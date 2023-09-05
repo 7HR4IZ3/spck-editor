@@ -1,0 +1,1 @@
+require(["server"],(function(){console.log("Starting language server")}));

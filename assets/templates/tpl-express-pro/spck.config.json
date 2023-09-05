@@ -1,0 +1,15 @@
+{
+  "run": {
+    "type": "url",
+    "tasks": {
+      "if": [["!exists", "node_modules"]],
+      "then": ["npm/install-dep", "npm/start"],
+      "else": {
+        "if": [["!urlExists", "http://localhost:9960"]],
+        "then": "npm/start"
+      }
+    },
+    "url": "http://localhost:9960",
+    "ignoreCurrent": true
+  }
+}
